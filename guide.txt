@@ -1,0 +1,24 @@
+ 			 ==================================================
+ 			/  Welcome to the Droid Command line Interface.   /  
+			|  Type 'guide' for help-manual.                  | 
+ 			\  Use 'leave' to exit."                          \ 
+  		         ==================================================
+------------------------------------------------------------------------------------------------
+
+
+->cwd : Displays Current Working Directory
+----------------------------------------------------
+->explore : Displays all the contents of directory.
+	    Excluding Hidden files.
+	
+            FLAGS :
+		   1) -h : displays hidden files also.
+		   2) -f <file-name/directory-name> : displays all the files/directory
+						      having given name. (Ignores case)
+ 		   3) -p : displays content along with permission in octal.
+---------------------------------------------------- 
+->goto 
+	1) goto <relative path to directory> :  Changes the directory relatively to the current directory.
+	2) goto back : moves to parent directory of current working directory.
+----------------------------------------------------	
+					 		

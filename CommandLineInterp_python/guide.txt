@@ -1,0 +1,59 @@
+ 			 ==================================================
+ 			/  Welcome to the Droid Command line Interface.   /  
+			|  Type 'guide' for help-manual.                  | 
+ 			\  Use 'leave' to exit."                          \ 
+  		         ==================================================
+------------------------------------------------------------------------------------------------
+
+ C-O-M-M-A-N-D-S
+=================
+
+
+
+-->guide : Displays the guide for the Command Line Interpreter.
+
+----------------------------------------------------
+
+-->leave : exists the Command Line Interface.
+
+----------------------------------------------------
+
+->cwd : Displays Current Working Directory
+
+----------------------------------------------------
+->explore : Displays all the contents of directory.
+	    Excluding Hidden files.
+	
+            FLAGS :
+		   1) -h : displays hidden files also.
+		   2) -f <file-name/directory-name> : displays all the files/directory
+						      having given name. (Ignores case)
+ 		   3) -p : displays content along with permission in octal.
+
+---------------------------------------------------- 
+
+->goto 
+	1) goto <relative path to directory> :  Changes the directory relatively to the current directory.
+	2) goto back : moves to parent directory of current working directory.
+
+----------------------------------------------------	
+
+-->make <directory name> : creates the directory with given name in the current working path.  
+	
+----------------------------------------------------	
+
+-->del <directoy name> : deletes the directory with given name in the current working path. Asks for 
+			 user's confirmation before deletion.
+
+----------------------------------------------------	
+
+-->rename <directory to be renamed> <new name> : renames the given directory with the new name
+						 provided nly if the directory with that name
+						 doesn't already exists.
+
+----------------------------------------------------	
+
+
+*Use Up/Down arrow keys to navigate  commands in history, that is previously typed command. 
+	 
+					 		

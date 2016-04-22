@@ -1,7 +1,7 @@
 import constants
 import os
 import errorHandler
-import exploreCommand, changeDirectory_command, createDir_command
+import exploreCommand, changeDirectory_command, createDir_command,fileManipulation_command
 
 def parameterCommand(dismantle_command, self):
 
@@ -21,6 +21,14 @@ def parameterCommand(dismantle_command, self):
 		directory_to_rename = dismantle_command[1]
 		name = dismantle_command[2]
 		createDir_command.renameDir(directory_to_rename,name, self)  
+
+	elif dismantle_command[0] == "create":
+		file_to_create = dismantle_command[1]
+		fileManipulation_command.createNewFile(file_to_create,self)	
+
+	elif dismantle_command[0] == "open":
+		file_to_open = dismantle_command[1]
+		fileManipulation_command.openFile(file_to_open,self)
 	
 
 	else:
@@ -80,7 +88,6 @@ def singleWordCommand(input_entered, self):
 def checkCommand(input_entered, self):
 
 		dismantle_command = input_entered.split(" ")
-		#print(dismantle_command)
 
 		if len(dismantle_command) > 1 :
 			parameterCommand(dismantle_command, self)

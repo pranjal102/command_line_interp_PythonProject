@@ -31,9 +31,17 @@ def deleteDir_confirmed(dirName, self):
 def renameDir(directory_to_rename, name, self):
 	if  os.path.isdir(directory_to_rename):
 		if os.path.isdir(name):
-			self.displayText("Directory with the name "+name+" already exists")
+			self.displayText("Directory with the name "+name+" already exists.")
 		else:
 			os.rename(directory_to_rename, name)
-			self.displayText("Directory renamed successfully")
+			self.displayText("Directory renamed successfully.")
+
+	elif os.path.isfile(directory_to_rename):
+		if os.path.isfile(name):
+			self.displayText("File with name "+name+" already exists.")
+		else:
+			os.rename(directory_to_rename,name)
+			self.displayText("File renamed successfully.")
+
 	else:
 		self.displayText("No such directory found")

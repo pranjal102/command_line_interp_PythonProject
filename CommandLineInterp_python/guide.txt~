@@ -47,8 +47,8 @@
 
 ----------------------------------------------------	
 
--->rename <directory/file to be renamed> <new name> : renames the given directory/file with the new name
-						 provided only if the directory/file with that name
+-->rename <directory to be renamed> <new name> : renames the given directory with the new name
+						 provided nly if the directory with that name
 						 doesn't already exists.
 
 ----------------------------------------------------	

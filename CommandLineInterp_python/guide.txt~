@@ -42,17 +42,39 @@
 	
 ----------------------------------------------------	
 
--->del <directoy name> : deletes the directory with given name in the current working path. Asks for 
+-->del <directoy/file name> : deletes the directory/file with given name in the current working path. Asks for 
 			 user's confirmation before deletion.
 
 ----------------------------------------------------	
 
--->rename <directory to be renamed> <new name> : renames the given directory with the new name
-						 provided nly if the directory with that name
+-->rename <directory/file to be renamed> <new name> : renames the given directory/file with the new name
+						 provided only if the directory/file with that name
 						 doesn't already exists.
 
 ----------------------------------------------------	
 
+-->create <file-name> : ceates an empty file with the given name.
+
+----------------------------------------------------
+
+-->open <file-name> : reads the given file and displays its contents on screen.	
+
+----------------------------------------------------	
+
+-->write <file-name> <data-to-write> : writes the given data into the file specified by the name.The data if
+				       already present in the file is overwritten.	
+
+----------------------------------------------------
+
+-->append <file-name> <data-to-append> : appends the given data to the existing file.
+					 The data is inserted in new line.									
+
+----------------------------------------------------
+
+-->copy <source-file> <dest-file> : Creates a copy of the file with the name given. If the destination is a
+				    directory than , the copied file is stored in that directory.		
+
+----------------------------------------------------
 
 *Use Up/Down arrow keys to navigate  commands in history, that is previously typed command. 
 	 

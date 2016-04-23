@@ -10,18 +10,22 @@ def createDir(directory_to_make, self):
 		self.displayText("directory with the given name already exists")
 
 def deleteDir(directory_to_del, self):
-	if  os.path.isdir(directory_to_del):
+	if  os.path.isdir(directory_to_del) or os.path.isfile(directory_to_del):
 		#shutil.rmtree(directory_to_del)
 		#self.displayText(directory_to_del+" directory removed successfully.")
-		self.displayText("Are you sure, you wanto to delete the directory?(Y/n)")
+		self.displayText("Are you sure, you wanto to delete the directory/file?(Y/n)")
 		self.yesNo_option_handler = "deleteDir "
 		self.temp_data = "deleteDir " + directory_to_del
 	else:
-		self.displayText("Directory with the given name don't exist")
+		self.displayText("Directory/File with the given name don't exist")
 
 
 def deleteDir_confirmed(dirName, self):
-	shutil.rmtree(dirName)
+	if(os.path.isdir(dirName)):
+		shutil.rmtree(dirName)
+	else:
+		os.remove(dirName)
+		
 	self.displayText(dirName+" directory removed successfully.")
 	self.yesNo_option_handler = ""
 	self.temp_data = ""

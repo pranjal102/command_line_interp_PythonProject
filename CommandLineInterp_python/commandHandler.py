@@ -24,12 +24,32 @@ def parameterCommand(dismantle_command, self):
 
 	elif dismantle_command[0] == "create":
 		file_to_create = dismantle_command[1]
-		fileManipulation_command.createNewFile(file_to_create,self)	
+		fileManipulation_command.createEmptyFile(file_to_create,self)	
 
 	elif dismantle_command[0] == "open":
 		file_to_open = dismantle_command[1]
 		fileManipulation_command.openFile(file_to_open,self)
+
+	elif dismantle_command[0] == "write":
+		file_to_input = dismantle_command[1]
+		data_to_write = ""
+		for i in range(2,len(dismantle_command)):
+			data_to_write = data_to_write + dismantle_command[i] + " "
+		fileManipulation_command.writeFileWithData(file_to_input,data_to_write,self)			
+
 	
+	elif dismantle_command[0] == "append":
+		file_to_input = dismantle_command[1]
+		data_to_write = ""
+		for i in range(2,len(dismantle_command)):
+			data_to_write = data_to_write + dismantle_command[i] + " "
+		fileManipulation_command.appendFileWithData(file_to_input,data_to_write,self)
+
+	elif dismantle_command[0] == "copy":
+		source = dismantle_command[1]
+		dest = dismantle_command[2]
+		fileManipulation_command.copyFile(source,dest,self)
+
 
 	else:
 		error = ""

@@ -14,6 +14,16 @@ def openFile(file_to_open,self):
 	self.displayText(constants.LINE_SEPARATORS)
 	file_object.close()
 
+def openFileWithDefaultApplication(file_to_open,self):
+	if os.path.isfile(file_to_open):
+		ret = os.system('xdg-open ' + ' "'+ file_to_open + '"')
+		if ret == 0:
+			self.displayText("File opened with default application.")
+		else:
+			self.displayText("Sorry! Something went wrong.")
+	else:
+		self.displayText("No such file exists in current directory.")	
+
 
 
 def writeFileWithData(file_to_create,data_to_write,self):

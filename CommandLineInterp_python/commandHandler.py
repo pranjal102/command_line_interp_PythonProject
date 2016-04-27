@@ -27,8 +27,11 @@ def parameterCommand(dismantle_command, self):
 		fileManipulation_command.createEmptyFile(file_to_create,self)	
 
 	elif dismantle_command[0] == "open":
-		file_to_open = dismantle_command[1]
-		fileManipulation_command.openFile(file_to_open,self)
+		flagOrFile = dismantle_command[1]
+		if flagOrFile == "-def":
+			fileManipulation_command.openFileWithDefaultApplication(dismantle_command[2],self)
+		else:
+			fileManipulation_command.openFile(dismantle_command[1],self)
 
 	elif dismantle_command[0] == "write":
 		file_to_input = dismantle_command[1]
@@ -75,6 +78,7 @@ def singleWordCommand(input_entered, self):
 	elif input_entered == "guide":
 		guide = open(constants.GUIDE_PATH)
 		#print(guide.read())
+		self.displayText(guide.read())
 		guide.close()
 	
 	elif input_entered.lower() == "y":

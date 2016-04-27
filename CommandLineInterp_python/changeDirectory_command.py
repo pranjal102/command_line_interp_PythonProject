@@ -9,11 +9,14 @@ def changeDir(dismantle_command, self):
 		if os.path.isdir(dismantle_command[1]):
 			os.chdir(dismantle_command[1])
 			#print(os.getcwd())
+			self.previousDirectory = self.currentDirectory
+			self.currentDirectory = os.getcwd()
 			self.displayText(os.getcwd())
 			#directory_track.append(os.getcwd())
 		else:
 			#print("'"+dismantle_command[1]+"' No such directory.")
 			self.displayText("'"+dismantle_command[1]+"' No such directory.")
+
 
 	#elif dismantle_command[1].lower() == "prev":
 	#	_ = directory_track.pop()
@@ -22,8 +25,16 @@ def changeDir(dismantle_command, self):
 
 	elif dismantle_command[1] == "~":
 		os.chdir(os.path.expanduser("~"))	
+		self.previousDirectory = self.currentDirectory
+		self.currentDirectory = os.getcwd()
+		self.displayText(os.getcwd())
 		#print(os.getcwd())	
 		self.displayText(os.getcwd())
+
+	elif dismantle_command[1] == "prev":
+		os.chdir(self.previousDirectory)
+		self.currentDirectory=os.getcwd()
+		self.displayText(os.getcwd())	
 
 	else:
 		cur = os.getcwd()
@@ -35,6 +46,8 @@ def changeDir(dismantle_command, self):
 		back_path += path_split[len(path_split)-2]
 		#print(back_path)
 		os.chdir(back_path)
+		self.previousDirectory = self.currentDirectory
+		self.currentDirectory = os.getcwd()
 		#print(os.getcwd())
 		self.displayText(os.getcwd())
 

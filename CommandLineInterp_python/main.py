@@ -25,6 +25,8 @@ class CLI(QDialog):
 		self.temp_data = ""               # first element - function's name using -> second number of temp data stored -> then data
 		self.topKeyHistory = len(self.cmdHistory) - 1
 		self.backHistory = 0;
+		self.currentDirectory = os.path.expanduser("~")
+		self.previousDirectory = os.path.expanduser("~")	
 		self.linedit.returnPressed.connect(self.updateUi)
 		self.setWindowTitle("Command Line Interpreter")
 		self.startSession()

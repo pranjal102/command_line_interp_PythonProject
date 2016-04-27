@@ -3,5 +3,5 @@ WELCOME_STRING = "Welcome to the Droid Command line Interface.\n Type 'guide' fo
 ERROR_DEF_STRING = " do not exist.\n Type 'guide' for help-manual.\n Use 'leave' to exit"
 PROMPT = ">> "
 LEAVE = "leave"
-GUIDE_PATH = "C:\\Users\\abc\\Desktop\\PythonProject\\guide.txt"
-DEFAULT_START_PATH = "C:\\Users\\abc"
+GUIDE_PATH = "/home/pranjal/Desktop/GitRepo/command_line_interp_PythonProject/CommandLineInterp_python/guide.txt"
+DEFAULT_START_PATH = "/home/pranjal"

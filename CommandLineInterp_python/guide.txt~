@@ -58,11 +58,7 @@
 
 ----------------------------------------------------
 
--->open <file-name> : reads the given file and displays its contents on screen.
-
--->open -def <file-name>: opens the file with given file name using the default application
-			  set for it in the system. For eg a text file in ubuntu will be 
-			  opened using 'gedit'.		    	
+-->open <file-name> : reads the given file and displays its contents on screen.	
 
 ----------------------------------------------------	
 
